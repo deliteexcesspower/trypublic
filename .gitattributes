@@ -1,0 +1,54 @@
+### <beg-file_info>
+### document_metadata:
+###   - caption: "__blank__"
+###     dmid: "gitattributes_filetype_bajox4te"
+###     date: created="2017-07-13"
+###     last: lastmod="2017-07-13"
+###     tags: tags
+###     author: created="__author__"
+###     filetype: "yaml"
+###     lastupdate: "__lastupdate__"
+###     desc: |
+###         * __desc__
+###     seealso: |
+###         * regain://"gitattributes myclip"
+###     seeinstead: |
+###         * __seeinstead__
+### <end-file_info>
+
+# These files are text and should be normalized (Convert crlf => lf)
+*.csv text
+*.yaml text
+*.yml  text
+*.php text
+*.css text
+*.js text
+*.htm text
+*.html text
+*.xml text
+*.txt text
+*.ini text
+*.inc text
+.htaccess text
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
+
+# Auto detect text files and perform LF normalization
+# http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
+* text=auto

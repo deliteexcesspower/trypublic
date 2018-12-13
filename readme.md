@@ -26,6 +26,16 @@
 
 ```
 
+- caption: add jsonschema directory
+  rectype: rrmicro004
+  dmid:    "uu979skikprektro"
+  date:    "2018-12-12 16:45:47"
+  tags:    __tags__
+  notes:  |
+    * __notes__
+  wwbody: |
+    * __blank__
+
 - caption: created readme
   rectype: rrmicro004
   dmid:    "uu872sparspempgr"

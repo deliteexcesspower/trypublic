@@ -11,7 +11,7 @@
 ###     desc: |
 ###         * jsonschema trybits and notes
 ###     seealso: |
-###         * __seealso__
+###         * https://github.com/Julian/jsonschema/issues/507
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

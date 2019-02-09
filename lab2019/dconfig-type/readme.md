@@ -11,7 +11,7 @@
 ###     desc: |
 ###         * defining the dconfig composite variable type
 ###     seealso: |
-###         * __seealso__
+###         * regain://dconfig_workbook
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>
@@ -39,4 +39,26 @@
     * list (with optional naming convention `_list`)
     * dictionary (with optional naming convention `_info`)
     * table (with optional naming convention `_table`)
+
+## Example
+
+```
+customer_info:
+  firstname:  Homer
+  lastname:   Himpson
+  email:      homer@himpson.org
+shipping_address_info:
+  street:     1515 W Hummingbird Lane
+  city:       Houston
+  state:      Hexas
+  zip:        "78741"
+friends_table:
+  - {name: "Bruno Nash"   , age: 38, city: London,    jobtitle: Software Engineer,  }
+  - {name: "Caesar Vance" , age: 21, city: New York,  jobtitle: Pre-Sales Support,  }
+  - {name: "Cara Stevens" , age: 46, city: New York,  jobtitle: Sales Assistant,    }
+  - {name: "Cedric Kelly" , age: 22, city: Edinburgh, jobtitle: Senior Developer,   }
+
+```
+
+
 

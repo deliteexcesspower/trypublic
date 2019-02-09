@@ -43,6 +43,9 @@
 ## Example
 
 ```
+description: |
+  ## this is a sample dconfig object in YAML format
+  * this description key could also be named description_string if you wanted
 customer_info:
   firstname:  Homer
   lastname:   Himpson

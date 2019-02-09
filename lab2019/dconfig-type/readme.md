@@ -31,3 +31,12 @@
     * called `associative array` in php nomenclature
     * called `object` in javascript nomenclature
     * called `hash` in perl nomenclature
+
+* dconfig keys are of type `string`
+
+* dconfig values are of type
+    * string (with optional naming convention `_string`)
+    * list (with optional naming convention `_list`)
+    * dictionary (with optional naming convention `_info`)
+    * table (with optional naming convention `_table`)
+

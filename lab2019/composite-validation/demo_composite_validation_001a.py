@@ -71,5 +71,39 @@ if(True and "sample documents"):
   pass
 ##endif
 
+if(True and "sample validation schemas"):
+  aavalidation_rules = yaml.safe_load('''
+    - rule_caption:     check-required-fields
+      rule_vpath:       "@"
+      validation_schema:
+        person_fname:
+          type: string
+          required: true
+
+    - rule_caption:     check-age-range
+      rule_vpath:       '@|@.person_age|{"person_age":@}'
+      validation_schema:
+        person_age:
+          "min": 2
+          "max": 120
+
+    - rule_caption:     check-underage-minor
+      rule_vpath:       '@|@.person_age|{"person_age":@}'
+      validation_schema:
+        person_age:
+          "min": 2
+          "max": 120
+
+    - rule_caption:     check-for-allergies
+      rule_vpath:       "@|@.person_allergies"
+      validation_schema:
+        person_allergies:
+          required:   True
+          type:       string
+    ''')
+  pass
+##endif
+
+
 
 

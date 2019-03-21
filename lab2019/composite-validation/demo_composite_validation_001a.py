@@ -15,7 +15,7 @@
 ###         * DEPENDENCY -- jmespath query language package
 ###         * DEPENDENCY -- cerberus validation package
 ###     seealso: |
-###         * __seealso__
+###         * href="smartpath://mytrybits/p/trypython/lab2014/cerberus/baredemo_jmespath_mixin_conditional.py"
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>
@@ -40,33 +40,33 @@ if('init_python'):
 if(True and "sample documents"):
   aadocuments = []
   aadocuments.append(yaml.safe_load('''
-      person_fname:       homer
-      person_lname:       himpson
-      person_age:         1
-      prize_caption:      free beer for life
-      prize_email:        prizes@abcbooze.com
-      prize_category:     alchohol
+      person_fname:         homer
+      person_lname:         himpson
+      person_age:           1
+      prize_caption:        free beer for life
+      prize_email:          prizes@abcbooze.com
+      prize_category:       alchohol
     '''))
   aadocuments.append(yaml.safe_load('''
-      person_fname:       jomer
-      person_lname:       jimpson
+      person_fname:         jomer
+      person_lname:         jimpson
     '''))
   aadocuments.append(yaml.safe_load('''
-      person_fname:       helen
-      person_lname:       himpson
-      person_age:         16
-      prize_caption:      free ammo for life
-      prize_email:        prizes@zzzguns.com
-      prize_category:     firearms
+      person_fname:         helen
+      person_lname:         himpson
+      person_age:           16
+      prize_caption:        free ammo for life
+      prize_email:          prizes@zzzguns.com
+      prize_category:       firearms
     '''))
   aadocuments.append(yaml.safe_load('''
-    person_fname:         maggie
-    person_lname:         himpson
-    person_age:           3
-    prize_caption:        free puppy
-    prize_email:          prizes@123pets.com
-    prize_category:       pets
-    parent_name:          homer himpson
+      person_fname:         maggie
+      person_lname:         himpson
+      person_age:           3
+      prize_caption:        free puppy
+      prize_email:          prizes@123pets.com
+      prize_category:       pets
+      parent_name:          homer himpson
     '''))
   pass
 ##endif
@@ -88,11 +88,14 @@ if(True and "sample validation schemas"):
           "max": 120
 
     - rule_caption:     check-underage-minor
-      rule_vpath:       '@|@.person_age|{"person_age":@}'
+      rule_vpath:       '[@]|[? @.person_age < `18`]'
       validation_schema:
-        person_age:
-          "min": 2
-          "max": 120
+        prize_category:
+          type: string
+          allowed: ['pets','toys','candy']
+        prize_email:
+          type:     string
+          regex:    '[\w]+@.*'
 
     - rule_caption:     check-for-allergies
       rule_vpath:       "@|@.person_allergies"
@@ -104,6 +107,33 @@ if(True and "sample validation schemas"):
   pass
 ##endif
 
+if(True and "iterate"):
+  vcc         =   cerberus.Validator(allow_unknown=True)
+  for dataroot in aadocuments:
 
+    print("## -------------------------------------------------------------------")
+    print("## {person_fname} {person_lname}".format(**dataroot))
+    pass
+
+    for myruleset in aavalidation_rules:
+      print("----")
+      ddresult        = dict()
+      ddresult.update(myruleset)
+      ddresult['rule_vpath_hasdata']  = ( not jmespath.compile(myruleset['rule_vpath']).search(dataroot) is None)
+      ddresult['rule_vpath_dataval']  = ( jmespath.compile(myruleset['rule_vpath']).search(dataroot) )
+      pass
+      if( ddresult['rule_vpath_hasdata'] ):
+        vcc.schema  =   myruleset['validation_schema']
+        ddresult['validation_result'] = vcc.validate(dataroot)
+        ddresult['validation_errors'] = vcc.errors
+      elif(True):
+        ddresult['validation_result'] = None
+      pprint.pprint(ddresult)
+      # pprint.pprint(myruleset['trigger_when'])
+      # pprint.pprint(jmesresult)
+    pass
+
+  pass
+##endif
 
 

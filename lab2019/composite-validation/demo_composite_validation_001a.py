@@ -79,6 +79,12 @@ if(True and "sample validation schemas"):
         person_fname:
           type: string
           required: true
+        person_lname:
+          type: string
+          required: true
+        person_age:
+          type: string
+          required: true
 
     - rule_caption:     check-age-range
       rule_vpath:       '@|@.person_age|{"person_age":@}'
@@ -129,8 +135,6 @@ if(True and "iterate"):
       elif(True):
         ddresult['validation_result'] = None
       pprint.pprint(ddresult)
-      # pprint.pprint(myruleset['trigger_when'])
-      # pprint.pprint(jmesresult)
     pass
 
   pass

@@ -1,0 +1,18 @@
+### <beg-file_info>
+### document_metadata:
+###   - caption: "caption"
+###     dmid: "uu896gutless_viewing"
+###     date: created="2019-05-24 17:32:15"
+###     last: lastmod="2019-05-24 17:32:15"
+###     tags: __tags__
+###     author:     created="__author__"
+###     filetype:   "__filetype__"
+###     lastupdate: "__lastupdate__"
+###     desc: |
+###         * __desc__
+###     seealso: |
+###         * href="https://twitter.com/brianwill"
+###         * oop politics ;; href="https://www.youtube.com/watch?v=QM1iUe6IofM"
+###     seeinstead: |
+###         * __seeinstead__
+### <end-file_info>

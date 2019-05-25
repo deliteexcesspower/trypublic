@@ -1,0 +1,18 @@
+### <beg-file_info>
+### document_metadata:
+###   - caption: "caption"
+###     dmid: "uu739quaintly_eatery"
+###     date: created="2019-05-24 17:22:00"
+###     last: lastmod="2019-05-24 17:22:00"
+###     tags: oop,politics,
+###     author:     created="__author__"
+###     filetype:   "__filetype__"
+###     lastupdate: "__lastupdate__"
+###     desc: |
+###         * __desc__
+###     seealso: |
+###         * composition over inheritance ;;  href="https://www.youtube.com/watch?v=wfMtDGfHWpA"
+###         * goodbye oop ;; href="https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53"
+###     seeinstead: |
+###         * __seeinstead__
+### <end-file_info>

@@ -13,6 +13,7 @@
 ###     seealso: |
 ###         * composition over inheritance ;;  href="https://www.youtube.com/watch?v=wfMtDGfHWpA"
 ###         * goodbye oop ;; href="https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53"
+###         * whats wrong with oop ;; href="https://www.youtube.com/watch?v=GMrjuuczZkQ"
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

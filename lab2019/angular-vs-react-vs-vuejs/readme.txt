@@ -11,6 +11,7 @@
 ###         * comparison of frontend frameworks
 ###     seealso: |
 ###         * href="https://www.youtube.com/watch?v=KMX1mFEmM3E"
+###         * href="https://www.youtube.com/watch?v=SWZ_4YBFBhs"
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

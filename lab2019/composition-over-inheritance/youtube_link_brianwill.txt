@@ -11,8 +11,10 @@
 ###     desc: |
 ###         * __desc__
 ###     seealso: |
+###         ## twitter
 ###         * href="https://twitter.com/brianwill"
-###         * oop politics ;; href="https://www.youtube.com/watch?v=QM1iUe6IofM"
+###         ## fave
+###         * oop practical ;; href="https://www.youtube.com/watch?v=QM1iUe6IofM"
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

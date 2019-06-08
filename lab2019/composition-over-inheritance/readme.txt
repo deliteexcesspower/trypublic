@@ -10,7 +10,7 @@
 ###     desc: |
 ###         * composition over inheritance
 ###     seealso: |
-###         * __seealso__
+###         * twitter://@brianwill
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

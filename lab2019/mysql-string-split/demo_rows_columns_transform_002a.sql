@@ -13,6 +13,7 @@
 ###         * https://stackoverflow.com/questions/2938427/converting-delimited-string-to-multiple-values-in-mysql
 ###         * https://stackoverflow.com/a/2938522/42223
 ###         * http://code.openark.org/blog/mysql/unwalking-a-string-with-group_concat
+###         * https://stackoverflow.com/a/56675141/42223
 ### <end-file_info>
 **/
 

@@ -10,7 +10,7 @@
 ###     desc: |
 ###         * uu265lactpagbliw
 ###     seealso: |
-###         * __seealso__
+###         * regain://uu265lactpagbliw
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

@@ -1,0 +1,30 @@
+### <beg-file_info>
+### document_metadata:
+###   - caption: "caption"
+###     dmid: "uu637frustrate_sappiness"
+###     date: created="2019-08-03 09:51:07"
+###     last: lastmod="2019-08-03 09:51:07"
+###     tags: __tags__
+###     author:     created="__author__"
+###     filetype:   "__filetype__"
+###     lastupdate: "__lastupdate__"
+###     desc: |
+###         ## Overview
+###         * clean jokes and riddles
+###     seealso: |
+###         ## See also
+###         * __seealso__
+###     seeinstead: |
+###         * __seeinstead__
+### <end-file_info>
+
+main:
+
+  - caption: "comb your face"
+    rectype: rrmicro006d
+    dmid:    "uu699smampblibtr"
+    date:    "2019-08-03 09:50:46"
+    wwbody: |
+      Comb your face
+      "Mommy, all the kids at school say I'm a werewolf! Is that true?"
+      "No, of course not. Now shut up and comb your face."

@@ -26,3 +26,7 @@
 
 ## tutorial piano
 * https://www.youtube.com/watch?v=lKc1jDs7chw&list=PLjXx5cErYPwj0wDDSDkWx4p7YkcYf0wUU
+
+## language
+
+* language ;; http://www.alljapaneseallthetime.com/blog/

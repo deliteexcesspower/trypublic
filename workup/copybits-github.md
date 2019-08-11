@@ -7,6 +7,7 @@
 # piano
 
 * difficult ;; https://www.youtube.com/watch?v=l15PDRSTn7s&list=RDHhylbnibTik&index=3
+* 500 songs ;; https://www.youtube.com/watch?v=1Nzgs5-V45g
 
 # harbor lights hornsby
 

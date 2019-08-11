@@ -1,6 +1,9 @@
 # singapore
 * https://www.youtube.com/watch?v=vKCABdKJunA
 
+# song writing
+* stay woke ;; https://www.youtube.com/watch?v=lGKlIJsz7bM
+
 # piano
 
 * difficult ;; https://www.youtube.com/watch?v=l15PDRSTn7s&list=RDHhylbnibTik&index=3

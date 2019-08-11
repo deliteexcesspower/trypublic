@@ -21,4 +21,7 @@
 ## karaoke harbor lights
 * https://www.youtube.com/watch?v=jRN31-V-FlI
 
+# the way it is hornsby
 
+## tutorial piano
+* https://www.youtube.com/watch?v=lKc1jDs7chw&list=PLjXx5cErYPwj0wDDSDkWx4p7YkcYf0wUU

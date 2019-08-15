@@ -27,12 +27,12 @@
 ```
 
   $sgdirr   =   getcwd();
-  $shdirr   =   '/var/www/sites/smosley_testing_d767-001ad/sites/all/modules';
+  print( $sgdirr ."\n\n" );
   //pass
-  chdir($shdirr);
+
   $vtemp    =   shell_exec('ls -al && pwd');
   $dumper   =   var_export( $vtemp , true );
-  print( $dumper ."\n\n");
+  print( $dumper ."\n\n" );
   //pass
 
 ```

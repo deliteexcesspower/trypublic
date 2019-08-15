@@ -53,11 +53,20 @@
 ```
 
 
-### simple check installed program
+### simple installed programs
 
 ```
 
-  $mycmd = 'which 7zip'
+  //$mycmd = 'type 7zip';         // NULL (not-installed ??)
+  //$mycmd = 'python --version';    // NULL
+  //pass
+
+  $mycmd = 'type ruby';                                 // YES_WORKY
+  $mycmd = 'type python';                               // YES_WORKY
+  $mycmd = 'type perl';                                 // YES_WORKY
+  $mycmd = 'perl --version';                            // YES_WORKY
+  $mycmd = "echo alphabetical | perl -pe 's^abe^eba^'"; // YES_WORKY
+  $mycmd = "python -c 'print(1212)'";                   // YES_WORKY
   //pass
 
   $vtemp    =   shell_exec($mycmd);

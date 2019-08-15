@@ -36,3 +36,33 @@
   //pass
 
 ```
+
+### simple cat contents of a file
+
+```
+
+  $sgdirr   =   getcwd();
+  print( $sgdirr ."\n\n" );
+  //pass
+
+  $vtemp    =   shell_exec('ls -al && pwd && cat README.txt');
+  $dumper   =   var_export( $vtemp , true );
+  print( $dumper ."\n\n" );
+  //pass
+
+```
+
+
+### simple check installed program
+
+```
+
+  $mycmd = 'which 7zip'
+  //pass
+
+  $vtemp    =   shell_exec($mycmd);
+  $dumper   =   var_export( $vtemp , true );
+  print( $dumper ."\n\n" );
+  //pass
+
+```

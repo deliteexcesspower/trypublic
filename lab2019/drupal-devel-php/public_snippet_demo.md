@@ -17,7 +17,7 @@
 
 ## Overview
 
-* these are snippets of php code you can run using https://mydrupalsite.com/admin/devel/php
+* these are snippets of php code you can run using https://mydrupalsite.com/devel/php
 * this depends on installed and enabled devel module
 
 ## shell_exec demo

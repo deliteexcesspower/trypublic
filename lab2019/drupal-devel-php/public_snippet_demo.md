@@ -20,6 +20,18 @@
 * these are snippets of php code you can run using https://mydrupalsite.com/devel/php
 * this depends on installed and enabled devel module
 
+## php demo
+
+### php heredoc
+
+$sgtemp = <<<uu937floyo0rezu
+    SELECT *
+    FROM qqperson
+    WHERE 1
+uu937floyo0rezu
+;
+print($sgtemp);
+
 ## shell_exec demo
 
 ### simple ls -al

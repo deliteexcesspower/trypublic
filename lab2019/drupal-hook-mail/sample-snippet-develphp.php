@@ -11,15 +11,13 @@
 function myfakemodulename_mail($key, &$message, $params) {
   ## <xreg-uu504flon001aa d="init">##
   $ddtemporary = [];
-  $ddtemporary['tmp_tsid']    =   REQUEST_TIME . (string)rand(1000,9999);
-  $ddtemporary['tmp_subj']    =   "Confirmation of your parking permit purchase";
-  $ddtemporary['tmp_ship']    =   "mailed to the address you provided"; //available for pick up at the Transportation Services office
-  $ddtemporary['tmp_sttype']  =   "faculty/staff";  // "student";
-  $ddtemporary['tmp_cash']    =   "$60.00";         //available for pick up at the Transportation Services office
-  $ddtemporary['tmp_paym']    =   "credit card";    //[credit card] [payroll deduction] [student billing]
+  $ddtemporary = array_merge( $ddtemporary , $params );
   ##;;
+  ## </xreg-uu504flon001aa>##
+
+  ## <xreg-uu647teyj d="email_key">##
   if( False ){/** noop **/}
-  elseif( $key =='daily' ){
+  elseif( $key =='email_default' ){
     $message['subject']                 = vsprintf("%s refid://%s",[
       $ddtemporary['tmp_subj'],
       $ddtemporary['tmp_tsid'],
@@ -47,13 +45,21 @@ function myfakemodulename_mail($key, &$message, $params) {
         $ddtemporary['tmp_paym'],
       ]);
   }
-  ## </xreg-uu504flon001aa>##
+  ## </xreg-uu647teyj>##
 }
 function myfakemodulename_sendnow() {
   if ( True ) {
     $params   =   [];
+    $params['tmp_tsid']    =   REQUEST_TIME . (string)rand(1000,9999);
+    $params['tmp_subj']    =   "Confirmation of your parking permit purchase";
+    $params['tmp_ship']    =   "mailed to the address you provided"; //available for pick up at the Transportation Services office
+    $params['tmp_sttype']  =   "faculty/staff";  // "student";
+    $params['tmp_cash']    =   "$60.00";         //available for pick up at the Transportation Services office
+    $params['tmp_paym']    =   "credit card";    //[credit card] [payroll deduction] [student billing]
+    //pass
     $from     =   'transportation@example.org';
-    $vresult  =   drupal_mail('myfakemodulename', 'daily', 'yelsop_yotteg@example.org', language_default(), $params, $from);
+    $vresult  =   drupal_mail('myfakemodulename', 'email_default', 'nobody@example.org', language_default(), $params, $from);
+    //pass
     $vresult  =   ((@$vresult['result']) ? 'True ' : 'False ') . REQUEST_TIME . (string)rand(1000,9999);
     $dumper   =   var_export( $vresult , true );
     drupal_set_message($dumper);

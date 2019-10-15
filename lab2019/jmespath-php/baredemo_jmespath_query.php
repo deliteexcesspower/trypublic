@@ -144,8 +144,48 @@ if( $nameismain ) {
 
   $oggdemo = new tinyhelper_jmespath_demo();
 
-  ## <xreg-uu745plunk001aa d="jmespath-expression-demo -- sampledata_person_table">##
+  ## <xreg-uu269roycl d="jmespath functions demo">##
   if( True ){
+
+    ## <xreg-uu374brisp d="vars.init -- dataroot">##
+    $dataroot = json_decode('
+      {"noop":"x"
+        ,"fruit_list": ["apple","banana","cherry","date","elderberry"]
+        ,"food_table": [{}
+            ,{"name":"apple","type":"fruit"}
+            ,{"name":"banana","type":"fruit"}
+            ,{"name":"cherry","type":"fruit"}
+            ,{"name":"date","type":"fruit"}
+            ,{"name":"elderberry","type":"fruit"}
+            banana","cherry","date","elderberry"
+            ]
+        }
+      '
+      ,true);
+    ## </xreg-uu374brisp>##
+
+    ## <xreg-uu374brisp d="vars.init -- expression">##
+    $expression = 'contains(`foobar`, `foo`)';            // ;; // evaluates to true
+    $expression = 'contains(@|fruit_list|[0], `foo`)';    // ;; // evaluates to false
+    $expression = 'contains(@|fruit_list|[0], `ppl`)';    // ;; // evaluates to true
+    $expression = 'contains(@|fruit_list|[*], `ppl`)';    // ;; // evaluates to false
+    $expression = 'contains(@|fruit_list|[*], `apple`)';  // ;; // evaluates to true
+    $expression = '@|fruit_list|[?contains(@,`rr`)]';     // ;; // returns elements containing substring
+    ## </xreg-uu374brisp>##
+
+    ## <xreg-uu617pibdr d="output.render">##
+    $jpquery  = $expression;
+    $vout     = JmesPath\search($jpquery, $dataroot);
+    //pass
+    $vout = var_export($vout, true);
+    print( $vout );
+    //pass
+    ## </xreg-uu617pibdr>##
+  }
+  ## </xreg-uu269roycl>##
+
+  ## <xreg-uu745plunk001aa d="jmespath-expression-demo -- sampledata_person_table">##
+  if( False ){
 
     ## <xreg-uu894spufd d="vars.init">##
     $mydelim = '@@';

@@ -141,8 +141,8 @@ class tinyhelper_jmespath_demo {
 // begin_: inline nameismain run -- href="http://stackoverflow.com/questions/2413991"
 $nameismain = !debug_backtrace();
 if( $nameismain ) {
-
   $oggdemo = new tinyhelper_jmespath_demo();
+  //pass
 
   ## <xreg-uu269roycl d="jmespath functions demo">##
   if( True ){
@@ -151,14 +151,16 @@ if( $nameismain ) {
     $dataroot = json_decode('
       {"noop":"x"
         ,"fruit_list": ["apple","banana","cherry","date","elderberry"]
-        ,"food_table": [{}
-            ,{"name":"apple","type":"fruit"}
-            ,{"name":"banana","type":"fruit"}
-            ,{"name":"cherry","type":"fruit"}
-            ,{"name":"date","type":"fruit"}
-            ,{"name":"elderberry","type":"fruit"}
-            banana","cherry","date","elderberry"
-            ]
+        ,"food_table": [{},{},{}
+            , {"name":"apple"      , "type":"fruit"}
+            , {"name":"banana"     , "type":"fruit"}
+            , {"name":"cherry"     , "type":"fruit"}
+            , {"name":"date"       , "type":"fruit"}
+            , {"name":"elderberry" , "type":"fruit"}
+            , {"name":"flounder"   , "type":"meat"}
+            , {"name":"garlic"     , "type":"vegetable"}
+            , {"name":"ham"        , "type":"meat"}
+          ]
         }
       '
       ,true);
@@ -171,6 +173,16 @@ if( $nameismain ) {
     $expression = 'contains(@|fruit_list|[*], `ppl`)';    // ;; // evaluates to false
     $expression = 'contains(@|fruit_list|[*], `apple`)';  // ;; // evaluates to true
     $expression = '@|fruit_list|[?contains(@,`rr`)]';     // ;; // returns elements containing substring
+    $expression = '@|food_table|[?(@.type == null)]|[*]';                       // ;; // filter-expression (test for null)
+    $expression = '@|food_table|[?(@.type != null)]|[*]';                       // ;; // filter-expression (test for non-null)
+    $expression = '@|food_table|[0]|keys(@)';                                   // ;; // keys (empty list)
+    $expression = '@|food_table|[-1]|keys(@)';                                  // ;; // keys (non-empty list) (indexing on negative integer)
+    $expression = '@|food_table|[*].keys(@)';                                   // ;; // keys (non-empty list)
+    $expression = '@|food_table|[*].values(@)|[?length(@) != `0`]';             // ;; // values (non-empty list)
+    $expression = '@|food_table|[? contains(@.type,`e`)]';                      // ;; // NOTE: this throws an error because we did not filter out the nulls (Argument 0 of contains must be one of the following types: string, array) (seealso: https://stackoverflow.com/a/55307847/42223)
+    $expression = '@|food_table|[?(@.type != to_string(`meat`))]';              // ;; // filter-expression (return list_of_dict, includes-empty-element)
+    $expression = '@|food_table|[?(@.type == to_string(`meat`))]|[*].name';     // ;; // filter-expression (return list, ignores-empty-element)
+    $expression = '@|food_table|[?(@.type!=null)]|[?contains(@.type,`e`)]';     // ;; // filter-expression only those types which contain the substring 'e'
     ## </xreg-uu374brisp>##
 
     ## <xreg-uu617pibdr d="output.render">##

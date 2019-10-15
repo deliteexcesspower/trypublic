@@ -167,11 +167,12 @@ if( $nameismain ) {
     ## </xreg-uu374brisp>##
 
     ## <xreg-uu374brisp d="vars.init -- expression">##
+    $expression = '@ != null';      // ;; // evaluates to true
     $expression = 'contains(`foobar`, `foo`)';            // ;; // evaluates to true
     $expression = 'contains(@|fruit_list|[0], `foo`)';    // ;; // evaluates to false
     $expression = 'contains(@|fruit_list|[0], `ppl`)';    // ;; // evaluates to true
-    $expression = 'contains(@|fruit_list|[*], `ppl`)';    // ;; // evaluates to false
-    $expression = 'contains(@|fruit_list|[*], `apple`)';  // ;; // evaluates to true
+    $expression = 'contains(@|fruit_list|[*], `ppl`)';    // ;; // evaluates to false (list context NO__WORKY with substring)
+    $expression = 'contains(@|fruit_list|[*], `apple`)';  // ;; // evaluates to true  (list context YES_WORKY with matching list element)
     $expression = '@|fruit_list|[?contains(@,`rr`)]';     // ;; // returns elements containing substring
     $expression = '@|food_table|[?(@.type == null)]|[*]';                       // ;; // filter-expression (test for null)
     $expression = '@|food_table|[?(@.type != null)]|[*]';                       // ;; // filter-expression (test for non-null)
@@ -182,7 +183,7 @@ if( $nameismain ) {
     $expression = '@|food_table|[? contains(@.type,`e`)]';                      // ;; // NOTE: this throws an error because we did not filter out the nulls (Argument 0 of contains must be one of the following types: string, array) (seealso: https://stackoverflow.com/a/55307847/42223)
     $expression = '@|food_table|[?(@.type != to_string(`meat`))]';              // ;; // filter-expression (return list_of_dict, includes-empty-element)
     $expression = '@|food_table|[?(@.type == to_string(`meat`))]|[*].name';     // ;; // filter-expression (return list, ignores-empty-element)
-    $expression = '@|food_table|[?(@.type!=null)]|[?contains(@.type,`e`)]';     // ;; // filter-expression only those types which contain the substring 'e'
+    $expression = '@|food_table|[?(@.type!=null)]|[?contains(@.type,`e`)]';     // ;; // filter-expression only those types containing substring 'e'
     ## </xreg-uu374brisp>##
 
     ## <xreg-uu617pibdr d="output.render">##

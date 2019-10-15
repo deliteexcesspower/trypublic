@@ -1,0 +1,31 @@
+### <beg-file_info>
+### document_metadata:
+###   - caption: "caption"
+###     dmid: "uu537stony_diffuser"
+###     date: created="2019-10-15 15:10:52"
+###     last: lastmod="2019-10-15 15:10:52"
+###     tags: validation,specification,
+###     desc: |
+###         ## Overview
+###         * validation approach that is more flexible and intuitive
+###         * improves upon the approach used in href="./demo_composite_validation_001a.py"
+###         * more compact syntax that follows the jmespath specification
+###         ## Issues
+###         * what if you restrict the current context to be the dataroot of the entire data object instead of context-specific?
+###     seealso: |
+###         ## See also
+###         * __seealso__
+###     seeinstead: |
+###         * __seeinstead__
+### <end-file_info>
+
+validation_rules_table:
+  - rule_caption:       check-required-fields
+    rule_requirements:
+      - (person_info.fname != ``)&&(person_info.fname != null)
+      - (person_info.lname != ``)&&(person_info.lname != null)
+    rule_condition:     "@"                     ## NOTE: rule_condition determines whether this
+                                                ## validation rule gets applied or skipped
+                                                ## if the condition evaluates to true against
+                                                ## the current context (dataroot? or specific sub-branch of dataroot?)
+                                                ## then the validation rule gets applied against the current context

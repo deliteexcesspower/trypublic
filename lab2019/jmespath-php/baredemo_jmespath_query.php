@@ -16,10 +16,11 @@
 ###         * project link    ;; https://packagist.org/packages/mtdowling/jmespath.php
 ###         * project link    ;; http://jmespath.org/examples.html
 ###         * pipe-expression ;; href="http://jmespath.org/specification.html#pipe-expressions"
+###         ## TODO
+###         * custom validation functions that operate based on type (object/array/string)
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>
-
 
 // ------------------------------------------------------------------------
 // begin_ init_php
@@ -240,6 +241,8 @@ if( $nameismain ) {
     $expression = '@|person_table|[0]|type(@)';                   // ;; // 'object'
     $expression = '@|person_table|[0]|keys(@)|type(@)';           // ;; // 'array'
     $expression = '@|person_table|[*]|type(@)';                   // ;; // 'array'
+    $expression = 'type(`12`)';                                   // ;; // 'number'
+    $expression = 'type(true)';                                   // ;; // 'null'
     ## </xreg-uu319stapt>##
 
     ## <xreg-uu617pibdr d="output.render">##

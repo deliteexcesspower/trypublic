@@ -145,7 +145,7 @@ if( $nameismain ) {
   //pass
 
   ## <xreg-uu269roycl d="jmespath functions demo">##
-  if( True ){
+  if( False ){
 
     ## <xreg-uu374brisp d="vars.init -- dataroot">##
     $dataroot = json_decode('
@@ -167,7 +167,14 @@ if( $nameismain ) {
     ## </xreg-uu374brisp>##
 
     ## <xreg-uu374brisp d="vars.init -- expression">##
-    $expression = '@ != null';      // ;; // evaluates to true
+    $expression = '@ != null';                // ;; // evaluates to true
+    $expression = 'to_string(null)';          // ;; // 'null'
+    $expression = 'to_number(`-12`)';          // ;; // -12
+    $expression = 'to_string(`-12`)';          // ;; // '-12'
+    $expression = 'to_string(``)';            // ;; // ''
+    $expression = 'to_string(`1`) && true';  // ;; // NULL
+    $expression = '(true == true)';           // ;; // true
+    $expression = '(false == false)';         // ;; // true
     $expression = 'contains(`foobar`, `foo`)';            // ;; // evaluates to true
     $expression = 'contains(@|fruit_list|[0], `foo`)';    // ;; // evaluates to false
     $expression = 'contains(@|fruit_list|[0], `ppl`)';    // ;; // evaluates to true
@@ -198,7 +205,7 @@ if( $nameismain ) {
   ## </xreg-uu269roycl>##
 
   ## <xreg-uu745plunk001aa d="jmespath-expression-demo -- sampledata_person_table">##
-  if( False ){
+  if( True ){
 
     ## <xreg-uu894spufd d="vars.init">##
     $mydelim = '@@';
@@ -209,6 +216,7 @@ if( $nameismain ) {
     $expression = '@.person_table|[*].{"Name":join(``,[@.fname,@.lname])}';           // ;; // concat fname and lname
     $expression = '@|person_table|[*].{"Name":join(`::`,[@.fname,@.lname])}';         // ;; // concat fname and lname
     $expression = "@|person_table|[*].{\"Name\":join(`$mydelim`,[@.fname,@.lname])}"; // ;; // concat fname and lname
+    $expression = '@|person_table|[0]|(fname != ``)&&(fname != null)';                // ;; // evaluates to true
     $expression = '@.person_table';                           // ;; // returns person_table
     $expression = '@|person_table|[0:2]|[*].fname';           // ;; // list_of_fname (return only two elements)
     $expression = '@.person_table[0:2].fname';                // ;; // list_of_fname (return only two elements)
@@ -226,6 +234,12 @@ if( $nameismain ) {
     $expression = '@|person_table|[0].fname|length(@)';       // ;; // int 6
     $expression = '@|person_table|[4].fname|length(@)';       // ;; // int 7
     $expression = '@|person_table|[0]|values(@)|length(@)';   // ;; // int 4
+    $expression = '@|person_table|[0]|@.fname|type(@)';           // ;; // 'string'
+    $expression = '@|person_table|[0]|length(@.fname)|type(@)';   // ;; // 'number'
+    $expression = '@|person_table|[0]|(@.noexisto)|type(@)';      // ;; // 'null'
+    $expression = '@|person_table|[0]|type(@)';                   // ;; // 'object'
+    $expression = '@|person_table|[0]|keys(@)|type(@)';           // ;; // 'array'
+    $expression = '@|person_table|[*]|type(@)';                   // ;; // 'array'
     ## </xreg-uu319stapt>##
 
     ## <xreg-uu617pibdr d="output.render">##

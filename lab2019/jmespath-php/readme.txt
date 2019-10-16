@@ -8,7 +8,7 @@
 ###     desc: |
 ###         * jmespath php demo
 ###     seealso: |
-###         * __seealso__
+###         * https://github.com/jdevillard/JmesPath.Net
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

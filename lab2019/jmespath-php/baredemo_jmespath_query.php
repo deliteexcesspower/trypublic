@@ -217,7 +217,6 @@ if( $nameismain ) {
     $expression = '@.person_table|[*].{"Name":join(``,[@.fname,@.lname])}';           // ;; // concat fname and lname
     $expression = '@|person_table|[*].{"Name":join(`::`,[@.fname,@.lname])}';         // ;; // concat fname and lname
     $expression = "@|person_table|[*].{\"Name\":join(`$mydelim`,[@.fname,@.lname])}"; // ;; // concat fname and lname
-    $expression = '@|person_table|[0]|(fname != ``)&&(fname != null)';                // ;; // evaluates to true
     $expression = '@.person_table';                           // ;; // returns person_table
     $expression = '@|person_table|[0:2]|[*].fname';           // ;; // list_of_fname (return only two elements)
     $expression = '@.person_table[0:2].fname';                // ;; // list_of_fname (return only two elements)
@@ -243,6 +242,8 @@ if( $nameismain ) {
     $expression = '@|person_table|[*]|type(@)';                   // ;; // 'array'
     $expression = 'type(`12`)';                                   // ;; // 'number'
     $expression = 'type(true)';                                   // ;; // 'null'
+    $expression = '@|person_table|[0]|(fname != ``)&&(fname != null)';                // ;; // evaluates to true
+    $expression = '@|person_table|[0].{"FullInfo":join(``,[@.fname,`://`,@.lname,`/`,to_string(@.age)])}'; // ;; // data transform
     ## </xreg-uu319stapt>##
 
     ## <xreg-uu617pibdr d="output.render">##

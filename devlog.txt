@@ -1,0 +1,16 @@
+### <beg-file_info>
+### document_metadata:
+###   - caption: "caption"
+###     dmid: "uu655thrive_diameter"
+###     date: created="2019-10-17 07:45:14"
+###     last: lastmod="2019-10-17 07:45:14"
+###     desc: |
+###         ## Overview
+###         * public lab-space of dreftymac.org
+###     seealso: |
+###         ## See also
+###         * __seealso__
+###     seeinstead: |
+###         * __seeinstead__
+### <end-file_info>
+

@@ -8,7 +8,9 @@
 ###     desc: |
 ###         * jmespath php demo
 ###     seealso: |
+###         ## alternative
 ###         * https://github.com/jdevillard/JmesPath.Net
+###         * https://stackoverflow.com/questions/777455/is-there-a-query-language-for-json
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

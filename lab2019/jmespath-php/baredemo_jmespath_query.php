@@ -146,7 +146,7 @@ if( $nameismain ) {
   //pass
 
   ## <xreg-uu269roycl d="jmespath functions demo">##
-  if( False ){
+  if( True ){
 
     ## <xreg-uu374brisp d="vars.init -- dataroot">##
     $dataroot = json_decode('
@@ -167,32 +167,66 @@ if( $nameismain ) {
       ,true);
     ## </xreg-uu374brisp>##
 
+    ## <xreg-uu468spank d="type">##
+    if( False ){
+      ## * seealso -- http://jmespath.org/specification.html?highlight=to_array#type
+      $expression = '["abc"]        |type(@)';   // ;;// 'array'
+      $expression = '`123.05`       |type(@)';   // ;;// 'number'
+      $expression = 'true           |type(@)';   // ;;// 'boolean' (PHP null // Jmespath docs boolean)
+      $expression = 'false          |type(@)';   // ;;// 'boolean' (PHP null // Jmespath docs boolean)
+      $expression = '`foo`          |type(@)';   // ;;// 'string'
+      $expression = 'null           |type(@)';   // ;;// 'null'
+      $expression = '`123`          |type(@)';   // ;;// 'number'
+      $expression = '`1`||`0`       |type(@)';   // ;;// 'number'
+      $expression = '``||``         |type(@)';   // ;;// 'string'
+      $expression = '{"abc": `123`} |type(@)';   // ;;// 'object'
+      $expression = 'type(`0`>`12`)'         ;   // ;; // 'boolean'
+    }
+    ## </xreg-uu468spank>##
+
     ## <xreg-uu374brisp d="vars.init -- expression">##
-    $expression = '@ != null';                // ;; // evaluates to true
-    $expression = 'to_string(null)';          // ;; // 'null'
-    $expression = 'to_number(`-12`)';          // ;; // -12
-    $expression = 'to_string(`-12`)';          // ;; // '-12'
-    $expression = 'to_string(``)';            // ;; // ''
-    $expression = 'to_string(`1`) && true';  // ;; // NULL
-    $expression = '(true == true)';           // ;; // true
-    $expression = '(false == false)';         // ;; // true
-    $expression = 'contains(`foobar`, `foo`)';            // ;; // evaluates to true
-    $expression = 'contains(@|fruit_list|[0], `foo`)';    // ;; // evaluates to false
-    $expression = 'contains(@|fruit_list|[0], `ppl`)';    // ;; // evaluates to true
-    $expression = 'contains(@|fruit_list|[*], `ppl`)';    // ;; // evaluates to false (list context NO__WORKY with substring)
-    $expression = 'contains(@|fruit_list|[*], `apple`)';  // ;; // evaluates to true  (list context YES_WORKY with matching list element)
-    $expression = '@|fruit_list|[?contains(@,`rr`)]';     // ;; // returns elements containing substring
-    $expression = '@|food_table|[?(@.type == null)]|[*]';                       // ;; // filter-expression (test for null)
-    $expression = '@|food_table|[?(@.type != null)]|[*]';                       // ;; // filter-expression (test for non-null)
-    $expression = '@|food_table|[0]|keys(@)';                                   // ;; // keys (empty list)
-    $expression = '@|food_table|[-1]|keys(@)';                                  // ;; // keys (non-empty list) (indexing on negative integer)
-    $expression = '@|food_table|[*].keys(@)';                                   // ;; // keys (non-empty list)
-    $expression = '@|food_table|[*].values(@)|[?length(@) != `0`]';             // ;; // values (non-empty list)
-    $expression = '@|food_table|[? contains(@.type,`e`)]';                      // ;; // NOTE: this throws an error because we did not filter out the nulls (Argument 0 of contains must be one of the following types: string, array) (seealso: https://stackoverflow.com/a/55307847/42223)
-    $expression = '@|food_table|[?(@.type != to_string(`meat`))]';              // ;; // filter-expression (return list_of_dict, includes-empty-element)
-    $expression = '@|food_table|[?(@.type == to_string(`meat`))]|[*].name';     // ;; // filter-expression (return list, ignores-empty-element)
-    $expression = '@|food_table|[?(@.type!=null)]|[?contains(@.type,`e`)]';     // ;; // filter-expression only those types containing substring 'e'
+    if(True){
+      $expression = '@ != null';                // ;; // evaluates to true
+      $expression = 'to_string(null)';          // ;; // 'null'
+      $expression = 'to_number(`-12`)';          // ;; // -12
+      $expression = 'to_string(`-12`)';          // ;; // '-12'
+      $expression = 'to_string(``)';            // ;; // ''
+      $expression = 'to_string(`1`) && true';  // ;; // NULL
+      $expression = '(true == true)';           // ;; // true
+      $expression = '(false == false)';         // ;; // true
+      $expression = 'contains(`foobar`, `foo`)';            // ;; // evaluates to true
+      $expression = 'contains(@|fruit_list|[0], `foo`)';    // ;; // evaluates to false
+      $expression = 'contains(@|fruit_list|[0], `ppl`)';    // ;; // evaluates to true
+      $expression = 'contains(@|fruit_list|[*], `ppl`)';    // ;; // evaluates to false (list context NO__WORKY with substring)
+      $expression = 'contains(@|fruit_list|[*], `apple`)';  // ;; // evaluates to true  (list context YES_WORKY with matching list element)
+      $expression = '@|fruit_list|[?contains(@,`rr`)]';     // ;; // returns elements containing substring
+      $expression = '@|food_table|[?(@.type == null)]|[*]';                       // ;; // filter-expression (test for null)
+      $expression = '@|food_table|[?(@.type != null)]|[*]';                       // ;; // filter-expression (test for non-null)
+      $expression = '@|food_table|[0]|keys(@)';                                   // ;; // keys (empty list)
+      $expression = '@|food_table|[-1]|keys(@)';                                  // ;; // keys (non-empty list) (indexing on negative integer)
+      $expression = '@|food_table|[*].keys(@)';                                   // ;; // keys (non-empty list)
+      $expression = '@|food_table|[*].values(@)|[?length(@) != `0`]';             // ;; // values (non-empty list)
+      $expression = '@|food_table|[? contains(@.type,`e`)]';                      // ;; // NOTE: this throws an error because we did not filter out the nulls (Argument 0 of contains must be one of the following types: string, array) (seealso: https://stackoverflow.com/a/55307847/42223)
+      $expression = '@|food_table|[?(@.type != to_string(`meat`))]';              // ;; // filter-expression (return list_of_dict, includes-empty-element)
+      $expression = '@|food_table|[?(@.type == to_string(`meat`))]|[*].name';     // ;; // filter-expression (return list, ignores-empty-element)
+      $expression = '@|food_table|[?(@.type!=null)]|[?contains(@.type,`e`)]';     // ;; // filter-expression only those types containing substring 'e'
+      $expression = 'to_array(`12`)';                   // ;; // [12]
+      $expression = 'to_array({"a":"b","c":"b"})';      // ;; // [{"a":null,"c":null}]
+      $expression = 'to_array({"a":`b`,"c":`b`})';      // ;; // [{"a":"b","c":"b"}]
+      $expression = 'to_number(12)';                    // ;; // JMESPATH_PARSE_ERROR
+      $expression = 'to_number(`12`)';                  // ;; // 12
+      $expression = 'to_number({"a":`b`,"c":`b`})';     // ;; // NULL
+      $expression = 'to_string({"a":"b","c":"b"})';     // ;; // '{"a":null,"c":null}'
+      $expression = 'to_string({"a":`b`,"c":`b`})';     // ;; // '{"a":"b","c":"b"}'
+      $expression = 'to_array(`10`||`14`)';                   // ;; // [10]
+      $expression = 'to_array(`0`||`14`)';                    // ;; // [0]
+      $expression = 'to_array(false||`14`)';                    // ;; // [14]
+      $expression = 'to_array(true||`14`)';                     // ;; // [14]
+      $expression = 'to_array(`0`>`12`)';                     // ;; // [false]
+    }
     ## </xreg-uu374brisp>##
+
+
 
     ## <xreg-uu617pibdr d="output.render">##
     $jpquery  = $expression;
@@ -206,7 +240,7 @@ if( $nameismain ) {
   ## </xreg-uu269roycl>##
 
   ## <xreg-uu745plunk001aa d="jmespath-expression-demo -- sampledata_person_table">##
-  if( True ){
+  if( False ){
 
     ## <xreg-uu894spufd d="vars.init">##
     $mydelim = '@@';

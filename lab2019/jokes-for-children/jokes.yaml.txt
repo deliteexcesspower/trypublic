@@ -27,4 +27,4 @@ main:
     wwbody: |
       Comb your face
       "Mommy, all the kids at school say I'm a werewolf! Is that true?"
-      "No, of course not. Now shut up and comb your face."
+      "No, of course not. Now go upstairs and comb your face."

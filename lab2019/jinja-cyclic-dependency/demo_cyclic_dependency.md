@@ -12,6 +12,7 @@
 ###     seealso: |
 ###         ## See also
 ###         * href="https://en.wikipedia.org/wiki/Circular_dependency"
+###         * regain://31967064
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>
@@ -21,7 +22,7 @@
 
 ```
 
-    ## jinja template with cyclic dependency
+    ## YAML-based jinja template with cyclic dependency
     var0: "{{var1}}"
     var1: "<xmp>( {{var0}} )</xmp>"
 

@@ -1,3 +1,25 @@
+<!---
+### <beg-file_info>
+### document_metadata:
+###   - caption: "caption"
+###     dmid: "uu701charter_concrete"
+###     date: created="2019-12-05 12:45:39"
+###     last: lastmod="2019-12-05 12:45:39"
+###     tags: __tags__
+###     author:     created="__author__"
+###     filetype:   "__filetype__"
+###     lastupdate: "__lastupdate__"
+###     desc: |
+###         ## Overview
+###         * __desc__
+###     seealso: |
+###         ## See also
+###         * __seealso__
+###     seeinstead: |
+###         * __seeinstead__
+### <end-file_info>
+--->
+
 ## Partition array of lines into three segments, based on embedded content boundary
 
 * **GOAL:** Partition an array of lines into segments, based on the position of a content boundary.

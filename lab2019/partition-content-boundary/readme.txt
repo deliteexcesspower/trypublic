@@ -10,7 +10,7 @@
 ###     desc: |
 ###         * partition-content-boundary
 ###     seealso: |
-###         * __seealso__
+###         * href="smartpath://mytrybits/p/trypython/mypython/libpy37tymac/Tjinja.py"  find="uu069nuftfrufttf"
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

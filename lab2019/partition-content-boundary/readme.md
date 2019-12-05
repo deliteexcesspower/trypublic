@@ -1,6 +1,8 @@
 ## Partition array of lines into three segments, based on embedded content boundary
 
-* In order to understand how this is supposed to work, here are some "Before and After" images
+* **GOAL:** Partition an array of lines into segments, based on the position of a content boundary.
+* The content boundary consists of two lines that contain some unique string that does not appear in any other line.
+* In order to demonstrate how this is supposed to work, here are some "Before and After" images.
 
 ### Content boundary begins at line zero
 

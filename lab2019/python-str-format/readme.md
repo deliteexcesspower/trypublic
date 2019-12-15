@@ -20,7 +20,9 @@
 ### <end-file_info>
 --->
 
-## Python `str.format`
+# Python `str.format`
+
+## DDG search
 
 * [DDG search python str.format](https://duckduckgo.com/?q=site%3Agithub.com+python+str.format&ia=web)
 

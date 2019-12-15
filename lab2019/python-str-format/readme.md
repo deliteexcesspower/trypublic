@@ -23,3 +23,10 @@
 ## Python `str.format`
 
 * [DDG search python str.format](https://duckduckgo.com/?q=site%3Agithub.com+python+str.format&ia=web)
+
+## Related projects <!--- dmid://uu420sealdriq1576379038 --->
+
+* javascript      ;; href="https://github.com/xfix/python-format"
+* lisp            ;; href="https://github.com/felipeochoa/py-format"
+* rustlang        ;; href="https://github.com/RustPython/RustPython/issues/1382"
+

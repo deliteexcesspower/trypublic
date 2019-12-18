@@ -25,6 +25,7 @@
 * this file contains comments using HTML/XML style syntax
 * fileinfo data island included in the top of the file
 * xregion style comments enclosing code sample
+* to view the commented-out sections, look at the raw source of the markdown file
 
 <!---##xreg id="uu414vundz" d="code literal inside xregion" ##--->
 ```

@@ -1,0 +1,124 @@
+Path: news.helsinki.fi!news.funet.fi!news.eunet.fi!EU.net!news.maxwell.syr.edu!innfeed.telstra.net!nsw1.news.telstra.net!newshost.comdyn.com.au!not-for-mail
+Newsgroups: comp.lang.perl.misc
+Organization: Commercial Dynamics Pty Ltd, N.S.W., Australia
+Lines: 105
+Message-ID: <6altrv$dns$1@comdyn.comdyn.com.au>
+References: <lbd8hg8ahv.fsf_-_@lnc.usc.edu>
+    <6agmge$kbo$2@csnews.cs.colorado.edu>
+NNTP-Posting-Host: mali.comdyn.com.au
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Newsreader: knews 0.9.8
+Xref: news.helsinki.fi comp.lang.perl.misc:109530
+From: mgjv@comdyn.com.au (Martien Verbruggen)
+To: Tom Christiansen <tchrist@mox.perl.com>
+Cc: Terrence Brannon <brannon@surf.usc.edu>
+Subject: Re: Request: GUI's considered harmful
+Date: 28 Jan 1998 00:24:31 GMT
+
+[CC to both posters quoted]
+
+In article <6agmge$kbo$2@csnews.cs.colorado.edu>,
+	Tom Christiansen <tchrist@mox.perl.com> writes:
+>  [courtesy cc of this posting sent to cited author via email]
+>
+> In comp.lang.perl.misc,
+>     Terrence Brannon <brannon@surf.usc.edu> writes:
+>:Tom, I lost my copy of your document "GUI's considered harmful" when I
+>:moved. Could you possibly email it to me?
+>
+> Unfortunately, so did I. :-(
+>
+> --tom
+
+A copy I had lying around:
+
+] Newsgroups: comp.unix.misc,alt.religion.computers,comp.windows.misc,comp.windows.news,comp.windows.x,comp.human-factors,comp.windows.open-look,comp.windows.x.motif
+] Path: convex!tchrist
+] From: Tom Christiansen <tchrist@convex.COM>
+] Subject: GUIs Considered Harmful
+] Message-Id: <1992Aug19.192513.28287@news.eng.convex.com>
+] Date: Wed, 19 Aug 1992 19:25:13 GMT
+] Reply-To: tchrist@convex.COM (Tom Christiansen)
+] Organization: Convex Computer Corporation, Colorado Springs, CO
+] Followup-To: alt.religion.computers
+
+[Despite the broad initial coverage here, please note the Followup-To:
+ line, which is meant only as a guideline, not a command; amend the
+ newsgroups line as you see fit.]
+
+                     GUIs Considered Harmful
+
+I am increasingly troubled by how many new applications are designed to
+work solely under a GUI.  While this may make some amount of sense for
+people coming from the PC or Mac worlds, one of the strengths of Unix
+has always been the ability to use it from anywhere.  These people
+don't seem to understand this.
+
+Of how much ultimate utility is that nifty new spreadsheet, editor, or
+debugger if I can't dialup from the field and run it on my vt100?  Too
+often a tool that "does windows" is little more than a marketing
+gimmick to dazzle impressionable users into not noticing that they
+don't have the real functionality they need.
+
+GUI-minded programs seldom lend themselves to being used as components
+in larger tools.  As such, they do not fit well into the UNIX
+tool-and-filter philosophy.  Instead of each being a single program
+that modestly attempts to do one thing well, they are a throwback to
+the Bad Old Days when each program was a standalone, monolithic monster
+that didn't interface with anything else.
+
+It's all well and good to place a GUI wrapper around an existing tool,
+but to design a new application with only a GUI interface in mind is to
+forever limit that tool's flexibility.  After all, how to you write a
+shell script that drives an automated xrn session?
+
+Providing programmability for the fancy graphics software remains an
+open problem.  The most effective use of GUIs in UNIX environments is
+to design the nitty-gritty computational function as a "back end" that
+can be driven either manually or automatically.
+
+The GUI wrapper should be a separable module.  If they're plug-replaceable,
+the application isn't irretrievably wedded to any specific GUI technology,
+such as SunView, NeWS, or even X11 or its children, like Open Look or
+Motif.  Sending standard commands down a pipe the way the STDWIN or wafe
+packages behave is also a reasonable approach.
+
+This means your program should be runnable both with and without the
+GUI present, and accept input from a mouse or under programmed
+control.  Preferably that means both a shell-level interface for
+convenience and a C-level interface for efficiency; Perl programmers
+could elect either method.  That way, naive users can use push-button
+GUIs, blind users can use Braille terminals, and sophisticated users
+can program solutions to intricate problems.
+
+It has been noted that GUIs make simple things simple, and complex ones
+impossible.  Certainly it is worthwhile to make simple things simple.
+But too often software is geared to only one level of expertise.  That
+which is novice-friendly is too frequently expert-hostile, and vice
+versa.  Being needlessly forced to click the mouse over a menu will
+slow down the expert user who is more comfortable with a keyboard
+interface.
+
+Gratuitous distractions from the keyboard only slow down the experienced
+user.  A precision pointing device that didn't require taking your hands
+off the keyboard would help.  There are cases where only a GUI makes
+sense, like a CAD system.  Being able to delineate a region or draw a
+figure with a mouse is probably a reasonable use for it, but selection of
+a range of possibilities isn't, at least not after you've become familiar
+with the tool.
+
+--tom
+
+--
+    Tom Christiansen      tchrist@convex.com      convex!tchrist
+
+
+              A truly wise man never plays leapfrog with a unicorn.
+
+--
+Martien Verbruggen                  |
+Webmaster www.tradingpost.com.au    | Very funny Scotty, now beam down my
+Commercial Dynamics Pty. Ltd.       | clothes.
+NSW, Australia                      |
+

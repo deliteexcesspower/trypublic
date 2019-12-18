@@ -11,6 +11,9 @@
 ###         * gui critique
 ###     seealso: |
 ###         * href="https://www.nocode.tech"
+###         * href="https://new.ycombinator.com/item?id=17660463"
+###             * href="./workup/image/screencapture-news-ycombinator-item-2019-12-14-19_16_54-uu548bantu8gren.png"
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>
+

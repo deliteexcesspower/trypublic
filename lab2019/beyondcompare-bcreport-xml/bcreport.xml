@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bcreport created="12/18/2019 10:26:02">
+  <foldercomp>
+    <ltpath>sftp://servername.foobar.org/local/active-log/vendorx-eod</ltpath>
+    <rtpath>C:\Users\username\Desktop\temp001aa\vendorx-prod-eod</rtpath>
+    <filters>*operation_transactions*.dat</filters>
+    <foldercomp>
+      <lt>
+        <name>local</name>
+        <size/>
+        <modified>1/22/2019 17:03:28</modified>
+      </lt>
+      <rt>
+        <name>local</name>
+        <size/>
+        <modified>1/22/2019 17:03:28</modified>
+      </rt>
+    </foldercomp>
+    <filecomp status="same">
+      <lt>
+        <name>operation_transactions_10114910.dat</name>
+        <size>26,447</size>
+        <modified>2/23/2017 08:34:57</modified>
+      </lt>
+      <rt>
+        <name>operation_transactions_10114910.dat</name>
+        <size>26,447</size>
+        <modified>2/23/2017 08:34:57</modified>
+      </rt>
+    </filecomp>
+    <filecomp status="same">
+      <lt>
+        <name>operation_transactions_20191214.dat</name>
+        <size>66,142</size>
+        <modified>12/16/2019 07:31:31</modified>
+      </lt>
+      <rt>
+        <name>operation_transactions_20191214.dat</name>
+        <size>66,142</size>
+        <modified>12/16/2019 07:31:31</modified>
+      </rt>
+    </filecomp>
+    <filecomp status="same">
+      <lt>
+        <name>operation_transactions_20191217.dat</name>
+        <size>238,986</size>
+        <modified>12/17/2019 07:32:07</modified>
+      </lt>
+      <rt>
+        <name>operation_transactions_20191217.dat</name>
+        <size>238,986</size>
+        <modified>12/17/2019 07:32:07</modified>
+      </rt>
+    </filecomp>
+    <filecomp status="ltonly">
+      <lt>
+        <name>operation_transactions_20191218.dat</name>
+        <size>44,044</size>
+        <modified>12/18/2019 07:32:25</modified>
+      </lt>
+    </filecomp>
+  </foldercomp>
+</bcreport>

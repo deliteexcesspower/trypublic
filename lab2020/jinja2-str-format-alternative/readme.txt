@@ -10,7 +10,7 @@
 ###     desc: |
 ###         * using jinja2 as an alternative to python str.format
 ###     seealso: |
-###         * __seealso__
+###         * https://stackoverflow.com/questions/5466451/how-can-i-print-literal-curly-brace-characters-in-python-string-and-also-use-fo/59759262#59759262
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

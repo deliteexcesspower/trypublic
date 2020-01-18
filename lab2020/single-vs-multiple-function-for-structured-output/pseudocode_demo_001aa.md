@@ -11,7 +11,7 @@
 ###     lastupdate: "__lastupdate__"
 ###     desc: |
 ###         ## Overview
-###         * __desc__
+###         * pseudocode_demo_001aa
 ###     seealso: |
 ###         ## See also
 ###         * __seealso__

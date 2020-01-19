@@ -28,7 +28,7 @@
 
 ### Sample northware ID
 
-<!---##xreg id="uu622brect" d="__blank__" ##--->
+<!---##xreg id="uu622brect" d="example" ##--->
 ```
 uu400spotlessbee1579404245
 
@@ -64,8 +64,6 @@ uu400spotlessbee1579404245
         * without autocomplete assistance?
     * how easy is it to recognize that they are different UUIDs just by glancing at them?
     * how easy is it to remember or recognize the UUIDs just by glancing at them?
-
-
 
 
 

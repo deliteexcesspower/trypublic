@@ -32,7 +32,7 @@
 ```
 uu400spotlessbee1579404245
 
-[uu400]         ;; part01 ;; low-frequency easily-typed ngram prefix
+[uu400]         ;; part01 ;; low-frequency high-entropy easily-typed tinyid ngram prefix
 [spotlessbee]   ;; part02 ;; human-readable human-recognizable diceword ngram
 [1579404245]    ;; part03 ;; optional entropy suffix
 

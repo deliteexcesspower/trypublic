@@ -11,8 +11,8 @@
 ###         * naming convention devised by dreftymac.org
 ###     seealso: |
 ###         ## See also
-###         * similar concept ;; uu933zipperwhip1581813432 ;; https://duckduckgo.com/?q=what3words&ia=web
-###         * wikipedia       ;; uu933zipperwhip1581813433 ;; https://en.wikipedia.org/wiki/What3words
+###         * similar concept w3w ;; uu933zipperwhip1581813432 ;; https://duckduckgo.com/?q=what3words&ia=web
+###         * wikipedia w3w       ;; uu933zipperwhip1581813433 ;; https://en.wikipedia.org/wiki/What3words
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

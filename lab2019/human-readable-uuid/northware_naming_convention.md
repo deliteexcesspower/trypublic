@@ -43,11 +43,14 @@ uu400spotlessbee1579404245
     * here we use a non-common letter sequence of two or more characters followed by 3 semi-random digits
     * regex specification `/uu[\d]+/`
     * consistently using the same non-common letter sequence makes the ID format easily searchable, easier to type with autocomplete and amenable to automated processing
+    * the trick is choosing a letter sequence that is easy to type, but does not occur commonly (e.g. uu qqu zqp zp zq)
+    *
 * part02:
     * for a human to memorize this ID, they can easily remember `spotlessbee` and do a substring search on that to find it again
 * part03:
     * entropy suffix further ensures the ID can be made globally unique if desired
     * used here to store a timestamp based on ID creation time
+    * this can be anything you want, but using a consistent convention helps
 
 ### Comparison: northware ID compared to UUIDS
 

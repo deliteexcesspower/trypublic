@@ -11,7 +11,8 @@
 ###         * naming convention devised by dreftymac.org
 ###     seealso: |
 ###         ## See also
-###         * __seealso__
+###         * similar concept ;; uu933zipperwhip1581813432 ;; https://duckduckgo.com/?q=what3words&ia=web
+###         * wikipedia       ;; uu933zipperwhip1581813433 ;; https://en.wikipedia.org/wiki/What3words
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>
@@ -47,6 +48,7 @@ uu400spotlessbee1579404245
     *
 * part02:
     * for a human to memorize this ID, they can easily remember `spotlessbee` and do a substring search on that to find it again
+    * even if recall is not important, the substring `spotlessbee`
 * part03:
     * entropy suffix further ensures the ID can be made globally unique if desired
     * used here to store a timestamp based on ID creation time

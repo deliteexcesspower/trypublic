@@ -18,7 +18,7 @@
 ###         * gibberish nonsense naming conventions
 ###     seealso: |
 ###         ## See also
-###         * __seealso__
+###         * twitter question ;; uu879evanescp1596188929 ;; https://twitter.com/DashBarkHuss/status/1281989377464336384
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

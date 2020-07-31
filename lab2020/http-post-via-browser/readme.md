@@ -17,6 +17,7 @@
 ###     seealso: |
 ###         ## See also
 ###         * stackoverflow ;; uu949httppost1596187286 ;; https://stackoverflow.com/questions/1651197/how-do-you-force-a-web-browser-to-use-post-when-getting-a-url
+###         * firefox ;; uu318httpheader1596189335 ;; regain://tryazure/uu072httpheader1591413124
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

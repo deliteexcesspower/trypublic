@@ -6,7 +6,7 @@
 ###     dmid: "uu182upon_reproach"
 ###     date: created="2019-03-21 09:21:04"
 ###     last: lastmod="2019-03-21 09:21:04"
-###     tags: __tags__
+###     tags: validation,json,jmespath,python,jsonschema
 ###     author:     created="__author__"
 ###     filetype:   "__filetype__"
 ###     lastupdate: "__lastupdate__"

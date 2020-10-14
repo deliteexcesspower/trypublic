@@ -72,7 +72,7 @@ if(True and "sample documents"):
 ##endif
 
 if(True and "sample validation schemas"):
-  aavalidation_rules = yaml.safe_load('''
+  validationrules_table = yaml.safe_load('''
     - rule_caption:     check-required-fields
       rule_vpath:       "@"
       validation_schema:
@@ -121,7 +121,7 @@ if(True and "iterate"):
     print("## {person_fname} {person_lname}".format(**dataroot))
     pass
 
-    for myruleset in aavalidation_rules:
+    for myruleset in validationrules_table:
       print("----")
       ddresult        = dict()
       ddresult.update(myruleset)

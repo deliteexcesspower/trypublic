@@ -10,7 +10,8 @@
 ###     desc: |
 ###         * diceware comic
 ###     seealso: |
-###         * __seealso__
+###         ### weblink
+###         * mozilla weblink ;; href="https://mozilla.github.io/webmaker-curriculum/ProtectingYourData/session02-secure-passwords.html" ;; dmid="uu817pufttx03xlink"
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>

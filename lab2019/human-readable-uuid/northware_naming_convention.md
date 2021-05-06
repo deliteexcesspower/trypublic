@@ -35,7 +35,7 @@ uu400spotlessbee1579404245
 
 [uu400]         ;; part01 ;; low-frequency high-entropy easily-typed tinyid ngram prefix
 [spotlessbee]   ;; part02 ;; human-readable human-recognizable diceword ngram
-[1579404245]    ;; part03 ;; optional entropy suffix
+[1579404245]    ;; part03 ;; optional entropy suffix with datetime component
 
 ```
 <!---##/xreg uu622brect ##--->
@@ -43,12 +43,14 @@ uu400spotlessbee1579404245
 * part01:
     * here we use a non-common letter sequence of two or more characters followed by 3 semi-random digits
     * regex specification `/uu[\d]+/`
-    * consistently using the same non-common letter sequence makes the ID format easily searchable, easier to type with autocomplete and amenable to automated processing
-    * the trick is choosing a letter sequence that is easy to type, but does not occur commonly (e.g. uu qqu zqp zp zq)
-    *
+    * consistently using the same non-common letter sequence makes the ID format easily searchable, easier to type with autocomplete and more amenable to automated processing
+    * the trick is choosing a letter sequence that is easy to type, but does not occur commonly (e.g. uu qqu zqp zp zq zpz)
+        * NOTE: the letter sequence is less important than the finger-digits used, (this comes into play when considering QWERTY vs DVORAK for example)
+
 * part02:
     * for a human to memorize this ID, they can easily remember `spotlessbee` and do a substring search on that to find it again
-    * even if recall is not important, the substring `spotlessbee`
+    * even if recall is not important, the substring `spotlessbee` is quickly recognizable and can serve as a mnemonic
+
 * part03:
     * entropy suffix further ensures the ID can be made globally unique if desired
     * used here to store a timestamp based on ID creation time

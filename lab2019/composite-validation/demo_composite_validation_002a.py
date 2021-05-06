@@ -108,11 +108,11 @@ class tinyhelper_validate_houston(object):
           pass
           ## <xrend>##uu652zuntp
 
-          ## <xrbeg id="uu333yipts" d="proc_validate -- apply any custom validation_messages">##
+          ## <xrbeg id="uu333yipts" d="proc_validate -- apply any custom validation_text">##
           mylist11valikeys = ddresult.get('validation_errors',{}).keys()
           if( mylist11valikeys.__len__() > 0 ):
             ddeml['err']    = True
-            mylist13frosso  = [ ddresult.get('validation_messages',{}).get(thiskey,['{thiskey} validation failed'.format(thiskey=thiskey)]) for thiskey in mylist11valikeys if(thiskey) ]
+            mylist13frosso  = [ ddresult.get('validation_text',{}).get(thiskey,['* validation error: {thiskey} either missing or invalid'.format(thiskey=thiskey)]) for thiskey in mylist11valikeys if(thiskey) ]
             mylist13frosso  = itertools.chain.from_iterable(mylist13frosso)
             ddeml['lst'].extend(mylist13frosso)
             ddeml['msg']    = ddeml['lst'][-1]
@@ -182,12 +182,6 @@ class tinyhelper_validate_houston(object):
 if(True):
   aadocuments = []
   aadocuments.append(yaml.safe_load('''
-      ## missing age
-      person_fname:         jomer
-      person_lname:         jimpson
-      fave_oddnumber:       3
-    '''))
-  aadocuments.append(yaml.safe_load('''
       person_fname:         cuomer
       person_lname:         cuimpson
       person_age:           34
@@ -211,21 +205,6 @@ if(True):
       prize_category:       alchohol
     '''))
   aadocuments.append(yaml.safe_load('''
-      ## should fail with incorrect fave_oddnumber
-      person_fname:         kuomer
-      person_lname:         kuimpson
-      person_age:           17
-      fave_oddnumber:       4
-    '''))
-  aadocuments.append(yaml.safe_load('''
-      person_fname:         helen
-      person_lname:         himpson
-      person_age:           16
-      prize_caption:        free ammo for life
-      prize_email:          prizes@zzzguns.com
-      prize_category:       firearms
-    '''))
-  aadocuments.append(yaml.safe_load('''
       person_fname:         maggie
       person_lname:         himpson
       person_age:           3
@@ -239,6 +218,28 @@ if(True):
       ## age is missing
       person_firstname:     fuomer
       person_lastname:      fuimpson
+    '''))
+  aadocuments.append(yaml.safe_load('''
+      ## missing age
+      person_fname:         jomer
+      person_lname:         jimpson
+      fave_oddnumber:       3
+    '''))
+  aadocuments.append(yaml.safe_load('''
+      ## cannot give firearms to a minor
+      person_fname:         helen
+      person_lname:         himpson
+      person_age:           16
+      prize_caption:        free ammo for life
+      prize_email:          prizes@zzzguns.com
+      prize_category:       firearms
+    '''))
+  aadocuments.append(yaml.safe_load('''
+      person_fname:         kuomer
+      person_lname:         kuimpson
+      person_age:           17
+      fave_oddnumber:       4
+      person_allergies:     gluten
     '''))
   pass
 ## <xrend>##uu888priwv
@@ -258,10 +259,10 @@ if(True):
   validationrules_table = yaml.safe_load('''
     - rule_caption:     check-wellformed-fields
       rule_vpath:       "@"
-      ## you can include optional validation_messages.
+      ## you can include optional validation_text.
       ## formatas list, one message per list element.
       ## put the list under a dict key that corresponds to the validation_schema key
-      validation_messages:
+      validation_text:
         person_email:
           - 'Email address must be correctly formatted.'
       validation_schema:
@@ -299,6 +300,8 @@ if(True):
           "max": 120
 
     - rule_caption:     check-underage-minor
+      ## this rule_vpath means that this validation element
+      ## is not triggred unles person_age exists and is less than 18
       rule_vpath:       '[@]|[? @.person_age < `18`]'
       validation_schema:
         prize_category:
@@ -308,16 +311,19 @@ if(True):
           type:     string
           regex:    '(^[^@]+@[^@\.]+[\.][^\.]+)'
 
-    ## counterintuitive
-    ## rule_vpath evaluates to true iff person_allergies exists
-    ## so why declare `required: true` here at all?
-    ## you should be evaluating for something else
+    ## counterintuitive -- formerly this had "required"
+    ##    rule_vpath evaluates to true iff person_allergies exists
+    ##    so why declare `required: true` here at all?
+    ##    changed it to evaluate for `forbidden` (opposite of `allowed`)
     - rule_caption:     check-for-allergies
       rule_vpath:       "@|@.person_allergies"
+      validation_text:
+        person_allergies:
+          - If present, the person_allergies field must not contain `gluten` or `air`
       validation_schema:
         person_allergies:
-          required:   True
           type:       string
+          forbidden:  ['gluten','air']
     ''')
   pass
 ## <xrend>##uu852snuwp
@@ -362,7 +368,7 @@ if(False):
 ## <xrbeg id="uu699ziksp" d="validate single document">##
 if(True):
   ## <xrbeg id="uu707prenk"     d="proc_apply_validation">##
-  mydocument = aadocuments[-1]
+  mydocument  = aadocuments[-1]
   vresult0909 = ogghelper.proc_apply_validation(
       dataroot=mydocument,
       rules_table=validationrules_table,
@@ -377,5 +383,4 @@ if(True):
 
   pass
 ## <xrend>##uu699ziksp
-
 

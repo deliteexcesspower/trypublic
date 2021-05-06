@@ -22,7 +22,8 @@
 
 ## multi-return-vs-multi-function
 
-### one-of-several ways to do it variant1 <!--- dmid://uu665waterelq1579390643 --->
+### one-of-several ways to do it variant1
+<!--- dmid://uu665waterelq1579390643 --->
 
 * we have a single function that returns structured-output
 * PRO ;; return a single structured variable that can be consumed as JSON
@@ -40,7 +41,8 @@ def output_star_ranking():
   return(vout)
 ```
 
-### one-of-several ways to do it variant2 <!--- dmid://uu665waterelq1579390645 --->
+### one-of-several ways to do it variant2
+<!--- dmid://uu665waterelq1579390645 --->
 
 * we have multiple functions that each return a single variant of the structured-output
 * PRO ;; arguably easier to think about a non-structured 'single-value-return' ... less to remember

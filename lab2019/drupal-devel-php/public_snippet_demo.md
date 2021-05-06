@@ -24,6 +24,7 @@
 
 ### php heredoc
 
+```
 $sgtemp = <<<uu937floyo0rezu
     SELECT *
     FROM qqperson
@@ -31,6 +32,7 @@ $sgtemp = <<<uu937floyo0rezu
 uu937floyo0rezu
 ;
 print($sgtemp);
+```
 
 ## shell_exec demo
 

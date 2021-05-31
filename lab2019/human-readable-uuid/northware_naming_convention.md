@@ -71,6 +71,8 @@ uu400spotlessbee1579404245
         * without autocomplete assistance?
     * how easy is it to recognize that they are different UUIDs just by glancing at them?
     * how easy is it to remember or recognize the UUIDs just by glancing at them?
+    * how usable, searchable, helpful if you only remember a partial substring and not the whole thing?
+
 
 
 

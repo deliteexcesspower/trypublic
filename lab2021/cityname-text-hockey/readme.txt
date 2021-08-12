@@ -5,23 +5,22 @@
 ###     date: created="2021-05-30T19:21:53"
 ###     last: lastmod="2021-05-30T19:21:53"
 ###     tags:       github,text,learnbit
-###     people:
-###         - __people__
-###     author:     created="__author__"
-###     filetype:   "__filetype__"
-###     lastupdate: "__lastupdate__"
 ###     namespace:
-###         - nams: __namespace__
+###         - nams: world/city
+###         - nams: world/places
 ###     desc: |
 ###         ## Overview
 ###         * cityname text hockey -- list of city names found from searching github
 ###         ## Learnbit -- uu577searchlore1622427764
-###         * searching github is better than searching google or ddgo if all you want is a csv file with no ads or bullshit
+###         * searching github is better than searching google or ddgo if all you want is a csv file with no ads and no bullshit
 ###     linktop:
 ###         -
 ###     seealso: |
 ###         ## See also
-###         * __seealso__
+###         * capt="libpy" ;; href="smartpath://mytrybits/p/trypython/mypython/libpy37tymac/TymacDataFaker.py?noop=0&find=uu527stisk1624328x03" ;; tags="libpy37tymac" ;; id="dmid://uu374swiss1624328x03xlink"
 ###     seeinstead: |
 ###         * __seeinstead__
 ### <end-file_info>
+
+
+

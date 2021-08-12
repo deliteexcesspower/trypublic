@@ -38,6 +38,7 @@ if(True):
   import pprint
   import re
   import yaml
+  import jmespath
   pass
   # import codecs
   # import textwrap
@@ -49,9 +50,24 @@ if(True):
 ## <xrbeg id="uu129swasp1622427005aa" d="nameismain">##
 if(__name__ == '__main__'):
 
-  ## <xrbeg id="uu143tinkz1622428" d="file_munage">##
+  ## <xrbeg id="uu002slelv1622430" d="data_munge -- query data from helpful_format_saltlake">##
   if(True):
+    sg711href     =   './cityname_hershey.yaml'
+    vg74paggroot  =   yaml.safe_load(codecs.open(sg711href, 'rb', encoding='utf8').read())
+    vg55query     =   '''droot|cityname_seent_table|[?len_space   > `0`]|[*]'''
+    vg55query     =   '''droot|cityname_seent_table|[?len_nonasc  > `0`]|[*]'''
+    vg55query     =   '''droot|cityname_seent_table|[?len_nonasc  == `0` && len_space  == `0`]|[*]'''
+    vg22outtable  =   jmespath.compile(vg55query).search(vg74paggroot)
+    pass
+    # vg7586kostoutt  =   re.findall(r'[\W]+',row['str_name'])
+    # print(vg7586kostoutt)
+    # vg22outtable    =   [ row for row in vg22outtable if(vg7586kostoutt) ]
+    pprint.pprint(vg22outtable)
+    pass
+  ## <xrend>##uu002slelv1622430
 
+  ## <xrbeg id="uu143tinkz1622428" d="file_munge -- convert raw to helpful_format_saltlake">##
+  if(False):
     sg711href = './city-name-raw.txt'
     mytext = codecs.open(sg711href, 'rb', encoding='utf8').read()
     mylines = [vxx for vxx in mytext.splitlines() if (vxx.strip())]

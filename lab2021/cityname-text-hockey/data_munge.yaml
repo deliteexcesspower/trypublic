@@ -1,0 +1,20 @@
+dataroot:
+  linkbase_str: https://jmespath.org/specification.html
+  greenwich_table:
+    - fname: "abs"
+    - fname: "avg"
+    - fname: "ceil"
+templateroot:
+  tpl_mydemo_info:
+    tpl_push_path: "c:/sm/docs/temp/mydemo.txt"
+    tpl_push_type: console.print
+    tpl_wwbody: |
+      @@{- set dff = dataroot  }
+      @@{ for row in dff.greenwich_table }
+        @@{- set myrowid = "uuvg88" ~ row.fname[0:4] ~ "00" ~ loop.index ~ "jft" }
+        - &@{myrowid}
+          ffrrid: @{myrowid}
+          ffname: @{row.fname}
+          fflink: @{dff.linkbase_str}#@{row.fname}
+          ffhref: href="@{dff.linkbase_str}#@{row.fname}"
+      @@{ endfor }

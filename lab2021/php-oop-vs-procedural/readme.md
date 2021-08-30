@@ -33,4 +33,12 @@
 * object-oriented vs procedural programming
 * explained in the context of PHP and answered on Stackoverflow
 
+### Stackoverflow:
+<!--- id="dmid://uu830soctc1630345x03xlink" --->
+
+* simple explanation PHP OOP vs Procedural?
+* capt="dreftymac answer" ;; href="https://stackoverflow.com/a/1530944/42223" ;; tags="__tags01__" ;; id="dmid://uu089clubs1630347x03xlink"
+* capt="Pennf0lio question" ;; href="https://stackoverflow.com/questions/1530868/simple-explanation-php-oop-vs-procedural" ;; tags="__tags01__" ;; id="dmid://uu469livst1630347x03xlink"
+
+
 

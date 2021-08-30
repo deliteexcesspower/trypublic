@@ -14,3 +14,23 @@
 ###         * __seeinstead__
 ### <end-file_info>
 
+main:
+
+  - caption: "php oop vs procedural"
+    rectype: rrmicro007
+    dmid:    "uu452brintsningg"
+    date:    "2021-08-30 10:37:29"
+    tags:    __tags__
+    trpub:    "false"
+    linktop:
+      - __linktop__
+    people:
+      - __people__
+    namespace:
+      - nams: __namespace__
+    wwbody: |
+      ## notes
+      * __notes__
+      ## seealso
+      * capt="readme local" ;; href="./lab2021/php-oop-vs-procedural/readme.txt" ;; tags="__tags01__" ;; id="dmid://uu349vefsw1630345x03xlink"
+

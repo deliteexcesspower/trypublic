@@ -12,10 +12,11 @@
 ###     filetype:   "__filetype__"
 ###     lastupdate: "__lastupdate__"
 ###     namespace:
-###       - public/gibberish-variable-name
+###       - nams: public/gibberish-variable-name
 ###     desc: |
 ###         ## Overview
 ###         * gibberish nonsense naming conventions
+###         * job security obfuscation (JSO)
 ###     seealso: |
 ###         ## See also
 ###         * twitter question ;; uu879evanescp1596188929 ;; https://twitter.com/DashBarkHuss/status/1281989377464336384

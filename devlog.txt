@@ -6,7 +6,7 @@
 ###     last: lastmod="2021-09-09 21:00:01"
 ###     desc: |
 ###         ## Overview
-###         * Moscow
+###         * MexicoHanalei
 ###         * public lab-space of dreftymac.org
 ###     seealso: |
 ###         ## See also
